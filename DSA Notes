@@ -1,0 +1,174 @@
+-----------------------------------------------------------------------------------------------------------------
+
+Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   Arrey   
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+Level
+    School:
+
+
+        Print alternate elements of an array:
+
+def printAl(arr,n):
+    for i in range(0, n, 2):
+        print(arr[i], end = " ")
+
+# Iterate karne wale me hamesha for loop lagana hai.
+# 0 index ko print karne ke baad index 1 ko skip karke index 2 me jana hai to range me 
+(0, _ , 2) likhna hai.
+# By default, the print function ends with a newline(\n), agar newline ke jagah me space use karna hai to print me end = "space" (end = " ") de do.
+
+
+
+
+
+
+Level
+    Basic:
+
+        Find duplicates under given constraints
+
+        Given a sorted array A[] having 10 elements which contain 6 different numbers in which only 1 number is repeated five times. Your task is to find the duplicate number using two comparisons only.
+
+
+def findDuplicate(A):
+    if A[3] == A[4]:
+        return A[3]
+    elif A[4] == A[5]:
+        return A[4]
+    return A[5]
+    
+
+#is problem me number of elements bhi diya gaya hai jo ki limited hai. aur 1 number kitne baar repeat hoga ye bhi diya hua hai. Is tarah ke problem me 2 ya 3 possiblility hi ho sakta hai. isliye kewal un possibility me hi check kar lena hai. solution aa jaega. Time complexity bhi kam lagega.
+
+    Lekin 
+
+    agar Yahi problem limited number of elements ke liye nahi hota. aur 1 number kitne baar repeat ho raha hai. humko ye bhi pata nahi rahta to isko kuch is tarah se solve karna hota:
+
+
+def findDuplicate(A):
+    A.sort()
+    for i in range(len(A)):
+        if A[i] == A[i+1]:
+            return A[i]
+
+
+a = [5, 10, 20, 1, 1, 1, 1, 1, 1, 30]
+ 
+print(findDuplicate(a)) 
+
+
+        #kabhi bhi iterate karna hai aur equality check karna hai. to for loop lagane se pahle sort() kar lenge. 
+        Aur 
+            if i == i + 1: 
+        kar ke check kar lenge.
+
+
+
+
+
+
+
+
+Find sum from 1 to n:   OR    Program to calculate sum of first N natural numbers:
+
+
+
+Logic: 
+
+You have a chukka. where you keep your money. firstly chukka is empty means zero money, s = 0.
+
+then you deposite 1 rupee coin. now your chukka have 1 rupee coin. s = s + 1 = 1.
+
+Now next day you deposite 2 rupees because this is day 2. now your chukka have total 3 rupees. 
+s = s + 2 
+  = 1 + 2 = 3
+
+next day you deposite 3 rupees because this is day 3. now your chukka have total 6 rupees. because
+
+s = s + 3
+  = 3 + 3 = 6
+
+and so on
+.
+.
+.
+.
+.
+................
+
+
+You have to increase with day by day thats why we assign days with a variable "i". and then assign it as i++
+
+    int n, i, sum = 0;
+
+    do {
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+    } while (n <= 0);
+
+    for (i = 1; i <= n; ++i) {
+        sum += i;
+    }
+
+    printf("Sum = %d", sum);
+    return 0;
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n;
+  
+  cout << "Enter the value of n: "<< endl;
+  cin >> n;
+  
+  /* Ek chota baccha gamla le ke baitha hua hai jo numbers
+  ko pahchanne to janta hai lekin number ke sequence ko 
+  nahi janta hai. wo kewal gamle se numbers ko uthata hai aur 
+  chukke me dalta hai. */
+  
+  int i = 1;
+  int s = 0; 
+  
+  while( i <= n){ /* Ye iterate karne ke liye hai */
+    s = s + i; /* Ye "s" ek chukka hai. jisme pahle se chukke
+    me rakha hua jisko s bol rahe hai. aur naya recent
+    paisa jo recently dalaya jisko "i" bole. jud jata hai.*/
+    
+    i++; /* Ye i++ ek bada bacha hai jo us chote bache ko batata
+    hai ki ab ye number us gamle se nikalo aur chukke me
+    dal do. */
+    
+  }
+  
+  cout<< "Sum from " << 1 << " to " << n << " = " << s;
+  
+   
+    return 0;
+} 
+
+bbb
+bnbn
+
+
+
+
+
+
+
+
+
+
+
+git remote set-url origin https://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@github.com/Md-Arsh-Ansari/Machine_learning.git
+
+
+
